@@ -1,0 +1,9 @@
+[29-Mar-2017 10:54:57 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
+[29-Mar-2017 11:00:00 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
+[29-Mar-2017 11:03:37 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'swahilicorpusdla'@'localhost' (using password: NO) in /home/swahilicorpusdla/public_html/connection/connect.php on line 12
+[29-Mar-2017 11:08:16 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'swahilicorpusdla'@'localhost' (using password: NO) in /home/swahilicorpusdla/public_html/connection/connect.php on line 12
+[01-Apr-2017 01:29:14 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
+[01-Apr-2017 01:29:38 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
+[01-Apr-2017 01:31:36 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
+[01-Apr-2017 01:31:43 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
+[01-Apr-2017 01:32:47 UTC] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/swahilicorpusdla/public_html/includes/injection.php on line 16
