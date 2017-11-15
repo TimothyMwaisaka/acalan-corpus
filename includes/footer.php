@@ -8,7 +8,7 @@
           <div class="container">
             <div class="row">
                   <div class="col-sm-9"> 
-                            Swahili Corpus by <a href="http://www.dlab.or.tz/" target="_blank" data-toggle="tooltip" title="Visit Data Lab">Data Lab Tanzania</a>
+                            Swahili Corpus by <a href="http://www.calan.org/" target="_blank" data-toggle="tooltip" title="Visit Data Lab">AU-ACALAN</a>
                             &copy; <?php echo date('Y');?> All Rights Reserved
                   </div>
                   <div class="col-sm-3"> 
