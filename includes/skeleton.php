@@ -719,7 +719,7 @@ EOD;
 					echo "<span style='color:red'>There was an error, try again</span>";
 					}
 				else{
-					$url = ($_SESSION['passwordchange']=='Yes')? 'swahilicorpus/corpus.php?uploadPhoto=1':'swahilicorpus/includes/login.php?logout';
+					$url = ($_SESSION['passwordchange']=='Yes')? 'corpus.php?uploadPhoto=1':'swahilicorpus/includes/login.php?logout';
 					echo '<meta http-equiv="refresh" content="0; url='.$url.'" />';
 					exit;
 					}
