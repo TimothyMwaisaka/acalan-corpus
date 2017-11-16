@@ -748,7 +748,7 @@ EOD;
 		//check if the file size has zero bytes
 		if($fileSize <= 0){
 			$error = urlencode("Please select photo to upload first");
-			$url = $_SERVER['PHP_SELF']."/swahilicorpus?uploadPhoto=1&error=$error";
+			$url = $_SERVER['PHP_SELF']."uploadPhoto=1&error=$error";
 			echo '<meta http-equiv="refresh" content="3; url='.$url.'">';
 			exit;
 			}
