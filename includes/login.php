@@ -54,7 +54,7 @@
 
 			if($rows == '0'){
 				$_SESSION['passwordchange'] = 'Yes';
-				@header("Location:http://".$_SERVER['HTTP_HOST']."/corpus.php");
+				@header("Location:http://".$_SERVER['HTTP_HOST']."/swahilicorpus/corpus.php");
 				}
 			else{
 				//capture user login information
