@@ -2,8 +2,8 @@
     session_start(); 
     unset($_SESSION['uName']);   
     session_destroy();
-    header('location:index.php');
+    header('location:/swahilicorpus/index.php');
     session_write_close();
-    header('Location: /');
+    header('Location: /swahilicorpus');
     die;
 ?>
