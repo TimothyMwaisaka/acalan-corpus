@@ -11,7 +11,7 @@
 		$_SESSION['passwordchange'] = '';
 		$_SESSION['privilege'] = '';
 		session_destroy();
-		header("Refresh:0; URL=http://".$_SERVER['HTTP_HOST']."/");
+		header("Refresh:0; URL=http://".$_SERVER['HTTP_HOST']."/swahilicorpus");
 		}
 			
 	//login function definition
@@ -30,7 +30,7 @@
 			$get_user = mysqli_query($connect, "SELECT * FROM login WHERE username='$username' AND password=MD5('$password')");
 			if(mysqli_num_rows($get_user)<1){
 				$msg = urlencode("Wrong username and/or password");
-				@header("Location:http://".$_SERVER['HTTP_HOST']."?error=$msg");
+				@header("Location:http://".$_SERVER['HTTP_HOST']."/swahilicorpus?error=$msg");
 				exit;
 				}
 			
@@ -40,7 +40,7 @@
 			//check if user is blocked
 			if($user_detail['privilegeid'] == "3"){
 				$msg = urlencode("Sorry, your account is Blocked");
-				@header("Location:http://".$_SERVER['HTTP_HOST']."?error=$msg");
+				@header("Location:http://".$_SERVER['HTTP_HOST']."/swahilicorpus?error=$msg");
 				exit;
 				}
 			

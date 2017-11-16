@@ -6,7 +6,7 @@
 	@session_start();
 	if(isset($_SESSION['userlogin'])){
 		if($_SESSION['userlogin']==''){
-			@header("Refresh:1; URL=http://".$_SERVER['HTTP_HOST']."/acalan");
+			@header("Refresh:1; URL=http://".$_SERVER['HTTP_HOST']."/swahilicorpus");
 			echo "Please wait we are redirecting you!<br/>";
 			echo "If your browser doesn't support this, please, <a href='http://".$_SERVER['HTTP_HOST']."/'>Click here</a>";
 			die();
@@ -18,7 +18,7 @@
 		$userPassword = $_SESSION['passwordchange'];
 		}
 	else{
-		@header("Refresh:1; URL=http://".$_SERVER['HTTP_HOST']."/acalan");
+		@header("Refresh:1; URL=http://".$_SERVER['HTTP_HOST']."/swahilicorpus");
 		echo "Please wait we are redirecting you!<br/>";
 		echo "If your browser doesn't support this, please, <a href='http://".$_SERVER['HTTP_HOST']."/'>Click here</a>";
 		die();

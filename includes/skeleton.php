@@ -719,7 +719,7 @@ EOD;
 					echo "<span style='color:red'>There was an error, try again</span>";
 					}
 				else{
-					$url = ($_SESSION['passwordchange']=='Yes')? 'corpus.php?uploadPhoto=1':'includes/login.php?logout';					
+					$url = ($_SESSION['passwordchange']=='Yes')? 'swahilicorpus/corpus.php?uploadPhoto=1':'swahilicorpus/includes/login.php?logout';
 					echo '<meta http-equiv="refresh" content="0; url='.$url.'" />';
 					exit;
 					}
@@ -732,7 +732,7 @@ EOD;
 	if(isset($_POST['Upload'])){
 		$pageurl = $_SERVER['HTTP_HOST'];
 		$username = $_SESSION['userlogin'];
-		$url = ($_SESSION['passwordchange']=='Yes')? $pageurl.'?uploadPhoto=1':$pageurl;
+		$url = ($_SESSION['passwordchange']=='Yes')? $pageurl.'/swahilicorpus?uploadPhoto=1':$pageurl;
 		
 		//known file extensions array
 		$known_extensions = array('png','jpg','jpeg');
@@ -748,7 +748,7 @@ EOD;
 		//check if the file size has zero bytes
 		if($fileSize <= 0){
 			$error = urlencode("Please select photo to upload first");
-			$url = $_SERVER['PHP_SELF']."?uploadPhoto=1&error=$error";
+			$url = $_SERVER['PHP_SELF']."/swahilicorpus?uploadPhoto=1&error=$error";
 			echo '<meta http-equiv="refresh" content="3; url='.$url.'">';
 			exit;
 			}
@@ -756,7 +756,7 @@ EOD;
 		//check if the file size has exceeded the maximum upload limit size
 		if($fileSize > $max_size){
 			$error = urlencode("The uploaded file has exceeded the maximum upload size limit");
-			$url = $_SERVER['PHP_SELF']."?uploadPhoto=1&error=$error";
+			$url = $_SERVER['PHP_SELF']."/swahilicorpus?uploadPhoto=1&error=$error";
 			echo '<meta http-equiv="refresh" content="3; url='.$url.'">';
 			exit;
 			}
@@ -768,7 +768,7 @@ EOD;
 		//check if the file extension is among the predefined file extensions
 		if(!in_array($ext, $known_extensions, true)){
 			$error = urlencode("Selected file is not of allowed image type");
-			$url = $_SERVER['PHP_SELF']."?uploadPhoto=1&error=$error";
+			$url = $_SERVER['PHP_SELF']."/swahilicorpus?uploadPhoto=1&error=$error";
 			echo '<meta http-equiv="refresh" content="0; url='.$url.'">';
 			exit;
 			}
@@ -787,7 +787,7 @@ EOD;
 
 		if(mysqli_error($connect)){
 			$error = urlencode("Profile photo was not updated");
-			$url = $_SERVER['PHP_SELF']."?uploadPhoto=1&error=$error";
+			$url = $_SERVER['PHP_SELF']."/swahilicorpus?uploadPhoto=1&error=$error";
 			echo '<meta http-equiv="refresh" content="0; url='.$url.'">';
 			exit;
 			}
@@ -798,7 +798,7 @@ EOD;
 			mysqli_query($connect, "UPDATE login SET lastlogin='$time', loginip='$address' WHERE username='$_SESSION[userlogin]'");
 			mysqli_query($connect, "INSERT INTO loginlog VALUES(now(),'$username','$address','$agent')");
 			
-			$url = ($_SESSION['passwordchange']=='Yes')? 'includes/login.php?logout':$_SERVER['PHP_SELF'].'?uploadCorpus=1';
+			$url = ($_SESSION['passwordchange']=='Yes')? 'includes/login.php?logout':$_SERVER['PHP_SELF'].'/swahilicorpus?uploadCorpus=1';
 			echo '<meta http-equiv="refresh" content="0; url='.$url.'">';
 			exit;
 			}
