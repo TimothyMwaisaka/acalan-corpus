@@ -62,7 +62,7 @@
 				mysqli_query($connect, "INSERT INTO loginlog VALUES('$time','$user_detail[username]','$address','$agent')");
 				mysqli_query($connect, "UPDATE login SET lastlogin='$time' WHERE username='$user_detail[username]'");
 				$_SESSION['passwordchange'] = 'No';
-				@header("Location:http://".$_SERVER['HTTP_HOST']."/corpus.php?uploadCorpus=1");
+				@header("Location:http://".$_SERVER['HTTP_HOST']."/swahilicorpus/corpus.php?uploadCorpus=1");
 				}
 			exit;
 			}
